@@ -1,0 +1,1714 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly Interop.SystemMonitor.3.7, Version=3.7.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Struct SystemMonitor.DisplayTypeConstants: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SystemMonitor.DisplayTypeConstants sysmonLineGraph = 1 : Public, Static, Literal, HasDefault
+    SystemMonitor.DisplayTypeConstants sysmonHistogram = 2 : Public, Static, Literal, HasDefault
+    SystemMonitor.DisplayTypeConstants sysmonReport = 3 : Public, Static, Literal, HasDefault
+    SystemMonitor.DisplayTypeConstants sysmonChartArea = 4 : Public, Static, Literal, HasDefault
+    SystemMonitor.DisplayTypeConstants sysmonChartStackedArea = 5 : Public, Static, Literal, HasDefault
+Struct SystemMonitor.ReportValueTypeConstants: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SystemMonitor.ReportValueTypeConstants sysmonDefaultValue = 0 : Public, Static, Literal, HasDefault
+    SystemMonitor.ReportValueTypeConstants sysmonCurrentValue = 1 : Public, Static, Literal, HasDefault
+    SystemMonitor.ReportValueTypeConstants sysmonAverage = 2 : Public, Static, Literal, HasDefault
+    SystemMonitor.ReportValueTypeConstants sysmonMinimum = 3 : Public, Static, Literal, HasDefault
+    SystemMonitor.ReportValueTypeConstants sysmonMaximum = 4 : Public, Static, Literal, HasDefault
+Struct SystemMonitor.DataSourceTypeConstants: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SystemMonitor.DataSourceTypeConstants sysmonNullDataSource = -1 : Public, Static, Literal, HasDefault
+    SystemMonitor.DataSourceTypeConstants sysmonCurrentActivity = 1 : Public, Static, Literal, HasDefault
+    SystemMonitor.DataSourceTypeConstants sysmonLogFiles = 2 : Public, Static, Literal, HasDefault
+    SystemMonitor.DataSourceTypeConstants sysmonSqlLog = 3 : Public, Static, Literal, HasDefault
+Struct SystemMonitor.SysmonFileType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SystemMonitor.SysmonFileType sysmonFileHtml = 1 : Public, Static, Literal, HasDefault
+    SystemMonitor.SysmonFileType sysmonFileReport = 2 : Public, Static, Literal, HasDefault
+    SystemMonitor.SysmonFileType sysmonFileCsv = 3 : Public, Static, Literal, HasDefault
+    SystemMonitor.SysmonFileType sysmonFileTsv = 4 : Public, Static, Literal, HasDefault
+    SystemMonitor.SysmonFileType sysmonFileBlg = 5 : Public, Static, Literal, HasDefault
+    SystemMonitor.SysmonFileType sysmonFileRetiredBlg = 6 : Public, Static, Literal, HasDefault
+    SystemMonitor.SysmonFileType sysmonFileGif = 7 : Public, Static, Literal, HasDefault
+Struct SystemMonitor.SysmonDataType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SystemMonitor.SysmonDataType sysmonDataAvg = 1 : Public, Static, Literal, HasDefault
+    SystemMonitor.SysmonDataType sysmonDataMin = 2 : Public, Static, Literal, HasDefault
+    SystemMonitor.SysmonDataType sysmonDataMax = 3 : Public, Static, Literal, HasDefault
+    SystemMonitor.SysmonDataType sysmonDataTime = 4 : Public, Static, Literal, HasDefault
+    SystemMonitor.SysmonDataType sysmonDataCount = 5 : Public, Static, Literal, HasDefault
+Struct SystemMonitor.SysmonBatchReason: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    SystemMonitor.SysmonBatchReason sysmonBatchNone = 0 : Public, Static, Literal, HasDefault
+    SystemMonitor.SysmonBatchReason sysmonBatchAddFiles = 1 : Public, Static, Literal, HasDefault
+    SystemMonitor.SysmonBatchReason sysmonBatchAddCounters = 2 : Public, Static, Literal, HasDefault
+    SystemMonitor.SysmonBatchReason sysmonBatchAddFilesAutoCounters = 3 : Public, Static, Literal, HasDefault
+Interface SystemMonitor.ICounterItem: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Double Value 'get ' : 
+    UInt32 Color 'get set' : 
+    Int32 Width 'get set' : 
+    Int32 LineStyle 'get set' : 
+    Int32 ScaleFactor 'get set' : 
+    System.String Path 'get ' : 
+  Methods:
+    get_Value(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Color(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Color(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Width(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Width(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LineStyle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LineStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ScaleFactor(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ScaleFactor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Path(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetValue(Double&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetStatistics(Double&(Out), Double&(Out), Double&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface SystemMonitor.ICounterItem2: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    SystemMonitor.ICounterItem
+  Properties:
+    Double Value 'get ' : 
+    UInt32 Color 'get set' : 
+    Int32 Width 'get set' : 
+    Int32 LineStyle 'get set' : 
+    Int32 ScaleFactor 'get set' : 
+    System.String Path 'get ' : 
+    Boolean Selected 'get set' : 
+    Boolean Visible 'get set' : 
+  Methods:
+    get_Value(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Color(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Color(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Width(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Width(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LineStyle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LineStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ScaleFactor(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ScaleFactor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Path(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetValue(Double&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetStatistics(Double&(Out), Double&(Out), Double&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    set_Selected(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Selected(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Visible(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Visible(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetDataAt(Int32(In), SysmonDataType(In), Object&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface SystemMonitor._ICounterItemUnion: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Double Value 'get ' : 
+    UInt32 Color 'get set' : 
+    Int32 Width 'get set' : 
+    Int32 LineStyle 'get set' : 
+    Int32 ScaleFactor 'get set' : 
+    System.String Path 'get ' : 
+    Boolean Selected 'get set' : 
+    Boolean Visible 'get set' : 
+  Methods:
+    get_Value(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Color(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Color(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Width(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Width(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LineStyle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LineStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ScaleFactor(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ScaleFactor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Path(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetValue(Double&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetStatistics(Double&(Out), Double&(Out), Double&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    set_Selected(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Selected(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Visible(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Visible(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetDataAt(Int32(In), SysmonDataType(In), Object&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface SystemMonitor.DICounterItem: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Double Value 'get ' : 
+    UInt32 Color 'get set' : 
+    Int32 Width 'get set' : 
+    Int32 LineStyle 'get set' : 
+    Int32 ScaleFactor 'get set' : 
+    System.String Path 'get ' : 
+    Boolean Selected 'get set' : 
+    Boolean Visible 'get set' : 
+  Methods:
+    get_Value(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Color(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Color(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Width(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Width(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LineStyle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LineStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ScaleFactor(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ScaleFactor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Path(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetValue(Double&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetStatistics(Double&(Out), Double&(Out), Double&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    set_Selected(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Selected(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Visible(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Visible(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetDataAt(Int32(In), SysmonDataType(In), Object&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface SystemMonitor.ICounters: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    System.Collections.IEnumerable
+  Properties:
+    Int32 Count 'get ' : 
+    SystemMonitor.CounterItem Item [System.Object] 'get ' : 
+  Methods:
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Add(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Remove(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface SystemMonitor.ILogFileItem: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    System.String Path 'get ' : 
+  Methods:
+    get_Path(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface SystemMonitor.DILogFileItem: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    System.String Path 'get ' : 
+  Methods:
+    get_Path(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface SystemMonitor.ILogFiles: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    System.Collections.IEnumerable
+  Properties:
+    Int32 Count 'get ' : 
+    SystemMonitor.LogFileItem Item [System.Object] 'get ' : 
+  Methods:
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Add(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Remove(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface SystemMonitor.ISystemMonitor: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Int32 Appearance 'get set' : 
+    UInt32 BackColor 'get set' : 
+    Int32 BorderStyle 'get set' : 
+    UInt32 ForeColor 'get set' : 
+    stdole.IFontDisp Font 'get set' : 
+    SystemMonitor.Counters Counters 'get ' : 
+    Boolean ShowVerticalGrid 'get set' : 
+    Boolean ShowHorizontalGrid 'get set' : 
+    Boolean ShowLegend 'get set' : 
+    Boolean ShowScaleLabels 'get set' : 
+    Boolean ShowValueBar 'get set' : 
+    Int32 MaximumScale 'get set' : 
+    Int32 MinimumScale 'get set' : 
+    Single UpdateInterval 'get set' : 
+    SystemMonitor.DisplayTypeConstants DisplayType 'get set' : 
+    Boolean ManualUpdate 'get set' : 
+    System.String GraphTitle 'get set' : 
+    System.String YAxisLabel 'get set' : 
+    UInt32 BackColorCtl 'get set' : 
+    System.String LogFileName 'get set' : 
+    System.DateTime LogViewStart 'get set' : 
+    System.DateTime LogViewStop 'get set' : 
+    UInt32 GridColor 'get set' : 
+    UInt32 TimeBarColor 'get set' : 
+    Boolean Highlight 'get set' : 
+    Boolean ShowToolbar 'get set' : 
+    Boolean ReadOnly 'get set' : 
+    SystemMonitor.ReportValueTypeConstants ReportValueType 'get set' : 
+    Boolean MonitorDuplicateInstances 'get set' : 
+    Int32 DisplayFilter 'get set' : 
+    SystemMonitor.LogFiles LogFiles 'get ' : 
+    SystemMonitor.DataSourceTypeConstants DataSourceType 'get set' : 
+    System.String SqlDsnName 'get set' : 
+    System.String SqlLogSetName 'get set' : 
+  Methods:
+    get_Appearance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Appearance(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BackColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BackColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BorderStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BorderStyle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ForeColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ForeColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Font(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Font(IFontDisp(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Counters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowVerticalGrid(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowVerticalGrid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowHorizontalGrid(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowHorizontalGrid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowLegend(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowLegend(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowScaleLabels(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowScaleLabels(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowValueBar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowValueBar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MaximumScale(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MaximumScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MinimumScale(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MinimumScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_UpdateInterval(Single(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_UpdateInterval(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplayType(DisplayTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplayType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ManualUpdate(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ManualUpdate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_GraphTitle(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_GraphTitle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_YAxisLabel(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_YAxisLabel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    CollectSample(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateGraph(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BrowseCounters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DisplayProperties(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Counter(Int32(In), ICounterItem&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AddCounter(String(In, HasFieldMarshal), ICounterItem&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DeleteCounter(ICounterItem(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_BackColorCtl(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BackColorCtl(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LogFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogFileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LogViewStart(DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogViewStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LogViewStop(DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogViewStop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_GridColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_GridColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_TimeBarColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_TimeBarColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Highlight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Highlight(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowToolbar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowToolbar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Paste(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Copy(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Reset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    set_ReadOnly(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReadOnly(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ReportValueType(ReportValueTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReportValueType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MonitorDuplicateInstances(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MonitorDuplicateInstances(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplayFilter(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplayFilter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogFiles(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DataSourceType(DataSourceTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DataSourceType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SqlDsnName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SqlDsnName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SqlLogSetName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SqlLogSetName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface SystemMonitor.ISystemMonitor2: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    SystemMonitor.ISystemMonitor
+  Properties:
+    Int32 Appearance 'get set' : 
+    UInt32 BackColor 'get set' : 
+    Int32 BorderStyle 'get set' : 
+    UInt32 ForeColor 'get set' : 
+    stdole.IFontDisp Font 'get set' : 
+    SystemMonitor.Counters Counters 'get ' : 
+    Boolean ShowVerticalGrid 'get set' : 
+    Boolean ShowHorizontalGrid 'get set' : 
+    Boolean ShowLegend 'get set' : 
+    Boolean ShowScaleLabels 'get set' : 
+    Boolean ShowValueBar 'get set' : 
+    Int32 MaximumScale 'get set' : 
+    Int32 MinimumScale 'get set' : 
+    Single UpdateInterval 'get set' : 
+    SystemMonitor.DisplayTypeConstants DisplayType 'get set' : 
+    Boolean ManualUpdate 'get set' : 
+    System.String GraphTitle 'get set' : 
+    System.String YAxisLabel 'get set' : 
+    UInt32 BackColorCtl 'get set' : 
+    System.String LogFileName 'get set' : 
+    System.DateTime LogViewStart 'get set' : 
+    System.DateTime LogViewStop 'get set' : 
+    UInt32 GridColor 'get set' : 
+    UInt32 TimeBarColor 'get set' : 
+    Boolean Highlight 'get set' : 
+    Boolean ShowToolbar 'get set' : 
+    Boolean ReadOnly 'get set' : 
+    SystemMonitor.ReportValueTypeConstants ReportValueType 'get set' : 
+    Boolean MonitorDuplicateInstances 'get set' : 
+    Int32 DisplayFilter 'get set' : 
+    SystemMonitor.LogFiles LogFiles 'get ' : 
+    SystemMonitor.DataSourceTypeConstants DataSourceType 'get set' : 
+    System.String SqlDsnName 'get set' : 
+    System.String SqlLogSetName 'get set' : 
+    Boolean EnableDigitGrouping 'get set' : 
+    Boolean EnableToolTips 'get set' : 
+    Boolean ShowTimeAxisLabels 'get set' : 
+    Boolean ChartScroll 'get set' : 
+    Int32 DataPointCount 'get set' : 
+  Methods:
+    get_DataPointCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    ScaleToFit(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SaveAs(String(HasFieldMarshal), SysmonFileType): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Relog(String(HasFieldMarshal), SysmonFileType, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ClearData(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LogSourceStartTime(DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LogSourceStopTime(DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetLogViewRange(DateTime(In), DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetLogViewRange(DateTime&(Out), DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BatchingLock(Boolean(In), SysmonBatchReason(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LoadSettings(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Appearance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Appearance(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BackColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BackColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BorderStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BorderStyle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ForeColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ForeColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Font(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Font(IFontDisp(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Counters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowVerticalGrid(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowVerticalGrid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowHorizontalGrid(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowHorizontalGrid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowLegend(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowLegend(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowScaleLabels(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowScaleLabels(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowValueBar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowValueBar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MaximumScale(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MaximumScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MinimumScale(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MinimumScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_UpdateInterval(Single(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_UpdateInterval(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplayType(DisplayTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplayType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ManualUpdate(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ManualUpdate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_GraphTitle(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_GraphTitle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_YAxisLabel(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_YAxisLabel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    CollectSample(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateGraph(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BrowseCounters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DisplayProperties(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Counter(Int32(In), ICounterItem&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AddCounter(String(In, HasFieldMarshal), ICounterItem&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DeleteCounter(ICounterItem(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_BackColorCtl(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BackColorCtl(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LogFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogFileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LogViewStart(DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogViewStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LogViewStop(DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogViewStop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_GridColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_GridColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_TimeBarColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_TimeBarColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Highlight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Highlight(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowToolbar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowToolbar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Paste(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Copy(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Reset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    set_ReadOnly(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReadOnly(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ReportValueType(ReportValueTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReportValueType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MonitorDuplicateInstances(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MonitorDuplicateInstances(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplayFilter(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplayFilter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogFiles(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DataSourceType(DataSourceTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DataSourceType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SqlDsnName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SqlDsnName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SqlLogSetName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SqlLogSetName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EnableDigitGrouping(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EnableDigitGrouping(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EnableToolTips(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EnableToolTips(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowTimeAxisLabels(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowTimeAxisLabels(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ChartScroll(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ChartScroll(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DataPointCount(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface SystemMonitor._ISystemMonitorUnion: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Int32 Appearance 'get set' : 
+    UInt32 BackColor 'get set' : 
+    Int32 BorderStyle 'get set' : 
+    UInt32 ForeColor 'get set' : 
+    stdole.IFontDisp Font 'get set' : 
+    SystemMonitor.Counters Counters 'get ' : 
+    Boolean ShowVerticalGrid 'get set' : 
+    Boolean ShowHorizontalGrid 'get set' : 
+    Boolean ShowLegend 'get set' : 
+    Boolean ShowScaleLabels 'get set' : 
+    Boolean ShowValueBar 'get set' : 
+    Int32 MaximumScale 'get set' : 
+    Int32 MinimumScale 'get set' : 
+    Single UpdateInterval 'get set' : 
+    SystemMonitor.DisplayTypeConstants DisplayType 'get set' : 
+    Boolean ManualUpdate 'get set' : 
+    System.String GraphTitle 'get set' : 
+    System.String YAxisLabel 'get set' : 
+    UInt32 BackColorCtl 'get set' : 
+    System.String LogFileName 'get set' : 
+    System.DateTime LogViewStart 'get set' : 
+    System.DateTime LogViewStop 'get set' : 
+    UInt32 GridColor 'get set' : 
+    UInt32 TimeBarColor 'get set' : 
+    Boolean Highlight 'get set' : 
+    Boolean ShowToolbar 'get set' : 
+    Boolean ReadOnly 'get set' : 
+    SystemMonitor.ReportValueTypeConstants ReportValueType 'get set' : 
+    Boolean MonitorDuplicateInstances 'get set' : 
+    Int32 DisplayFilter 'get set' : 
+    SystemMonitor.LogFiles LogFiles 'get ' : 
+    SystemMonitor.DataSourceTypeConstants DataSourceType 'get set' : 
+    System.String SqlDsnName 'get set' : 
+    System.String SqlLogSetName 'get set' : 
+    Boolean EnableDigitGrouping 'get set' : 
+    Boolean EnableToolTips 'get set' : 
+    Boolean ShowTimeAxisLabels 'get set' : 
+    Boolean ChartScroll 'get set' : 
+    Int32 DataPointCount 'get set' : 
+  Methods:
+    get_DataPointCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    ScaleToFit(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SaveAs(String(HasFieldMarshal), SysmonFileType): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Relog(String(HasFieldMarshal), SysmonFileType, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ClearData(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LogSourceStartTime(DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LogSourceStopTime(DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetLogViewRange(DateTime(In), DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetLogViewRange(DateTime&(Out), DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BatchingLock(Boolean(In), SysmonBatchReason(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LoadSettings(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Appearance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Appearance(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BackColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BackColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BorderStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BorderStyle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ForeColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ForeColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Font(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Font(IFontDisp(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Counters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowVerticalGrid(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowVerticalGrid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowHorizontalGrid(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowHorizontalGrid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowLegend(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowLegend(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowScaleLabels(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowScaleLabels(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowValueBar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowValueBar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MaximumScale(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MaximumScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MinimumScale(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MinimumScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_UpdateInterval(Single(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_UpdateInterval(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplayType(DisplayTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplayType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ManualUpdate(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ManualUpdate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_GraphTitle(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_GraphTitle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_YAxisLabel(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_YAxisLabel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    CollectSample(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateGraph(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BrowseCounters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DisplayProperties(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Counter(Int32(In), ICounterItem&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AddCounter(String(In, HasFieldMarshal), ICounterItem&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DeleteCounter(ICounterItem(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_BackColorCtl(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BackColorCtl(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LogFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogFileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LogViewStart(DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogViewStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LogViewStop(DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogViewStop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_GridColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_GridColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_TimeBarColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_TimeBarColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Highlight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Highlight(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowToolbar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowToolbar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Paste(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Copy(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Reset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    set_ReadOnly(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReadOnly(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ReportValueType(ReportValueTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReportValueType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MonitorDuplicateInstances(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MonitorDuplicateInstances(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplayFilter(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplayFilter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogFiles(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DataSourceType(DataSourceTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DataSourceType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SqlDsnName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SqlDsnName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SqlLogSetName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SqlLogSetName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EnableDigitGrouping(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EnableDigitGrouping(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EnableToolTips(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EnableToolTips(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowTimeAxisLabels(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowTimeAxisLabels(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ChartScroll(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ChartScroll(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DataPointCount(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface SystemMonitor.DISystemMonitor: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Int32 Appearance 'get set' : 
+    UInt32 BackColor 'get set' : 
+    Int32 BorderStyle 'get set' : 
+    UInt32 ForeColor 'get set' : 
+    stdole.IFontDisp Font 'get set' : 
+    SystemMonitor.Counters Counters 'get ' : 
+    Boolean ShowVerticalGrid 'get set' : 
+    Boolean ShowHorizontalGrid 'get set' : 
+    Boolean ShowLegend 'get set' : 
+    Boolean ShowScaleLabels 'get set' : 
+    Boolean ShowValueBar 'get set' : 
+    Int32 MaximumScale 'get set' : 
+    Int32 MinimumScale 'get set' : 
+    Single UpdateInterval 'get set' : 
+    SystemMonitor.DisplayTypeConstants DisplayType 'get set' : 
+    Boolean ManualUpdate 'get set' : 
+    System.String GraphTitle 'get set' : 
+    System.String YAxisLabel 'get set' : 
+    UInt32 BackColorCtl 'get set' : 
+    System.String LogFileName 'get set' : 
+    System.DateTime LogViewStart 'get set' : 
+    System.DateTime LogViewStop 'get set' : 
+    UInt32 GridColor 'get set' : 
+    UInt32 TimeBarColor 'get set' : 
+    Boolean Highlight 'get set' : 
+    Boolean ShowToolbar 'get set' : 
+    Boolean ReadOnly 'get set' : 
+    SystemMonitor.ReportValueTypeConstants ReportValueType 'get set' : 
+    Boolean MonitorDuplicateInstances 'get set' : 
+    Int32 DisplayFilter 'get set' : 
+    SystemMonitor.LogFiles LogFiles 'get ' : 
+    SystemMonitor.DataSourceTypeConstants DataSourceType 'get set' : 
+    System.String SqlDsnName 'get set' : 
+    System.String SqlLogSetName 'get set' : 
+    Boolean EnableDigitGrouping 'get set' : 
+    Boolean EnableToolTips 'get set' : 
+    Boolean ShowTimeAxisLabels 'get set' : 
+    Boolean ChartScroll 'get set' : 
+    Int32 DataPointCount 'get set' : 
+  Methods:
+    get_DataPointCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    ScaleToFit(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SaveAs(String(HasFieldMarshal), SysmonFileType): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Relog(String(HasFieldMarshal), SysmonFileType, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ClearData(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LogSourceStartTime(DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LogSourceStopTime(DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetLogViewRange(DateTime(In), DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetLogViewRange(DateTime&(Out), DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BatchingLock(Boolean(In), SysmonBatchReason(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LoadSettings(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Appearance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Appearance(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BackColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BackColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BorderStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BorderStyle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ForeColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ForeColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Font(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Font(IFontDisp(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Counters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowVerticalGrid(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowVerticalGrid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowHorizontalGrid(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowHorizontalGrid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowLegend(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowLegend(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowScaleLabels(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowScaleLabels(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowValueBar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowValueBar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MaximumScale(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MaximumScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MinimumScale(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MinimumScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_UpdateInterval(Single(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_UpdateInterval(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplayType(DisplayTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplayType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ManualUpdate(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ManualUpdate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_GraphTitle(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_GraphTitle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_YAxisLabel(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_YAxisLabel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    CollectSample(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateGraph(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BrowseCounters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DisplayProperties(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Counter(Int32(In), ICounterItem&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AddCounter(String(In, HasFieldMarshal), ICounterItem&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DeleteCounter(ICounterItem(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_BackColorCtl(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BackColorCtl(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LogFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogFileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LogViewStart(DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogViewStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LogViewStop(DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogViewStop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_GridColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_GridColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_TimeBarColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_TimeBarColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Highlight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Highlight(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowToolbar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowToolbar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Paste(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Copy(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Reset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    set_ReadOnly(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReadOnly(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ReportValueType(ReportValueTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReportValueType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MonitorDuplicateInstances(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MonitorDuplicateInstances(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplayFilter(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplayFilter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogFiles(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DataSourceType(DataSourceTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DataSourceType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SqlDsnName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SqlDsnName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SqlLogSetName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SqlLogSetName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EnableDigitGrouping(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EnableDigitGrouping(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EnableToolTips(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EnableToolTips(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowTimeAxisLabels(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowTimeAxisLabels(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ChartScroll(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ChartScroll(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DataPointCount(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface SystemMonitor.DISystemMonitorInternal: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Properties:
+    Int32 Appearance 'get set' : 
+    UInt32 BackColor 'get set' : 
+    Int32 BorderStyle 'get set' : 
+    UInt32 ForeColor 'get set' : 
+    stdole.IFontDisp Font 'get set' : 
+    SystemMonitor.Counters Counters 'get ' : 
+    Boolean ShowVerticalGrid 'get set' : 
+    Boolean ShowHorizontalGrid 'get set' : 
+    Boolean ShowLegend 'get set' : 
+    Boolean ShowScaleLabels 'get set' : 
+    Boolean ShowValueBar 'get set' : 
+    Int32 MaximumScale 'get set' : 
+    Int32 MinimumScale 'get set' : 
+    Single UpdateInterval 'get set' : 
+    SystemMonitor.DisplayTypeConstants DisplayType 'get set' : 
+    Boolean ManualUpdate 'get set' : 
+    System.String GraphTitle 'get set' : 
+    System.String YAxisLabel 'get set' : 
+    UInt32 BackColorCtl 'get set' : 
+    System.String LogFileName 'get set' : 
+    System.DateTime LogViewStart 'get set' : 
+    System.DateTime LogViewStop 'get set' : 
+    UInt32 GridColor 'get set' : 
+    UInt32 TimeBarColor 'get set' : 
+    Boolean Highlight 'get set' : 
+    Boolean ShowToolbar 'get set' : 
+    Boolean ReadOnly 'get set' : 
+    SystemMonitor.ReportValueTypeConstants ReportValueType 'get set' : 
+    Boolean MonitorDuplicateInstances 'get set' : 
+    Int32 DisplayFilter 'get set' : 
+    SystemMonitor.LogFiles LogFiles 'get ' : 
+    SystemMonitor.DataSourceTypeConstants DataSourceType 'get set' : 
+    System.String SqlDsnName 'get set' : 
+    System.String SqlLogSetName 'get set' : 
+    Boolean EnableDigitGrouping 'get set' : 
+    Boolean EnableToolTips 'get set' : 
+    Boolean ShowTimeAxisLabels 'get set' : 
+    Boolean ChartScroll 'get set' : 
+    Int32 DataPointCount 'get set' : 
+  Methods:
+    get_DataPointCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    ScaleToFit(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SaveAs(String(HasFieldMarshal), SysmonFileType): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Relog(String(HasFieldMarshal), SysmonFileType, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ClearData(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LogSourceStartTime(DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LogSourceStopTime(DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetLogViewRange(DateTime(In), DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetLogViewRange(DateTime&(Out), DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BatchingLock(Boolean(In), SysmonBatchReason(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    LoadSettings(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_Appearance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Appearance(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BackColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BackColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_BorderStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BorderStyle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ForeColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ForeColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Font(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Font(IFontDisp(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Counters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowVerticalGrid(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowVerticalGrid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowHorizontalGrid(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowHorizontalGrid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowLegend(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowLegend(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowScaleLabels(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowScaleLabels(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowValueBar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowValueBar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MaximumScale(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MaximumScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MinimumScale(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MinimumScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_UpdateInterval(Single(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_UpdateInterval(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplayType(DisplayTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplayType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ManualUpdate(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ManualUpdate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_GraphTitle(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_GraphTitle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_YAxisLabel(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_YAxisLabel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    CollectSample(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    UpdateGraph(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    BrowseCounters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DisplayProperties(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Counter(Int32(In), ICounterItem&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    AddCounter(String(In, HasFieldMarshal), ICounterItem&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    DeleteCounter(ICounterItem(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_BackColorCtl(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_BackColorCtl(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LogFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogFileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LogViewStart(DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogViewStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_LogViewStop(DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogViewStop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_GridColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_GridColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_TimeBarColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_TimeBarColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Highlight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Highlight(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowToolbar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowToolbar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Paste(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Copy(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Reset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    set_ReadOnly(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReadOnly(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ReportValueType(ReportValueTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ReportValueType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_MonitorDuplicateInstances(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_MonitorDuplicateInstances(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DisplayFilter(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DisplayFilter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_LogFiles(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DataSourceType(DataSourceTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_DataSourceType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SqlDsnName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SqlDsnName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_SqlLogSetName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_SqlLogSetName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EnableDigitGrouping(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EnableDigitGrouping(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_EnableToolTips(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_EnableToolTips(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ShowTimeAxisLabels(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ShowTimeAxisLabels(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_ChartScroll(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_ChartScroll(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_DataPointCount(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Interface SystemMonitor.ISystemMonitorEvents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    OnCounterSelected(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnCounterAdded(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnCounterDeleted(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnSampleCollected(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnDblClick(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface SystemMonitor.DISystemMonitorEvents: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    OnCounterSelected(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnCounterAdded(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnCounterDeleted(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnSampleCollected(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    OnDblClick(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class SystemMonitor.SystemMonitorClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    SystemMonitor.DISystemMonitor
+    SystemMonitor.SystemMonitor
+    SystemMonitor.DISystemMonitorEvents_Event
+    SystemMonitor.ISystemMonitor
+  Properties:
+    Int32 Appearance 'get set' : 
+    UInt32 BackColor 'get set' : 
+    Int32 BorderStyle 'get set' : 
+    UInt32 ForeColor 'get set' : 
+    stdole.IFontDisp Font 'get set' : 
+    SystemMonitor.Counters Counters 'get ' : 
+    Boolean ShowVerticalGrid 'get set' : 
+    Boolean ShowHorizontalGrid 'get set' : 
+    Boolean ShowLegend 'get set' : 
+    Boolean ShowScaleLabels 'get set' : 
+    Boolean ShowValueBar 'get set' : 
+    Int32 MaximumScale 'get set' : 
+    Int32 MinimumScale 'get set' : 
+    Single UpdateInterval 'get set' : 
+    SystemMonitor.DisplayTypeConstants DisplayType 'get set' : 
+    Boolean ManualUpdate 'get set' : 
+    System.String GraphTitle 'get set' : 
+    System.String YAxisLabel 'get set' : 
+    UInt32 BackColorCtl 'get set' : 
+    System.String LogFileName 'get set' : 
+    System.DateTime LogViewStart 'get set' : 
+    System.DateTime LogViewStop 'get set' : 
+    UInt32 GridColor 'get set' : 
+    UInt32 TimeBarColor 'get set' : 
+    Boolean Highlight 'get set' : 
+    Boolean ShowToolbar 'get set' : 
+    Boolean ReadOnly 'get set' : 
+    SystemMonitor.ReportValueTypeConstants ReportValueType 'get set' : 
+    Boolean MonitorDuplicateInstances 'get set' : 
+    Int32 DisplayFilter 'get set' : 
+    SystemMonitor.LogFiles LogFiles 'get ' : 
+    SystemMonitor.DataSourceTypeConstants DataSourceType 'get set' : 
+    System.String SqlDsnName 'get set' : 
+    System.String SqlLogSetName 'get set' : 
+    Boolean EnableDigitGrouping 'get set' : 
+    Boolean EnableToolTips 'get set' : 
+    Boolean ShowTimeAxisLabels 'get set' : 
+    Boolean ChartScroll 'get set' : 
+    Int32 DataPointCount 'get set' : 
+    Int32 ISystemMonitor_Appearance 'get set' : 
+    UInt32 ISystemMonitor_BackColor 'get set' : 
+    Int32 ISystemMonitor_BorderStyle 'get set' : 
+    UInt32 ISystemMonitor_ForeColor 'get set' : 
+    stdole.IFontDisp ISystemMonitor_Font 'get set' : 
+    SystemMonitor.Counters ISystemMonitor_Counters 'get ' : 
+    Boolean ISystemMonitor_ShowVerticalGrid 'get set' : 
+    Boolean ISystemMonitor_ShowHorizontalGrid 'get set' : 
+    Boolean ISystemMonitor_ShowLegend 'get set' : 
+    Boolean ISystemMonitor_ShowScaleLabels 'get set' : 
+    Boolean ISystemMonitor_ShowValueBar 'get set' : 
+    Int32 ISystemMonitor_MaximumScale 'get set' : 
+    Int32 ISystemMonitor_MinimumScale 'get set' : 
+    Single ISystemMonitor_UpdateInterval 'get set' : 
+    SystemMonitor.DisplayTypeConstants ISystemMonitor_DisplayType 'get set' : 
+    Boolean ISystemMonitor_ManualUpdate 'get set' : 
+    System.String ISystemMonitor_GraphTitle 'get set' : 
+    System.String ISystemMonitor_YAxisLabel 'get set' : 
+    UInt32 ISystemMonitor_BackColorCtl 'get set' : 
+    System.String ISystemMonitor_LogFileName 'get set' : 
+    System.DateTime ISystemMonitor_LogViewStart 'get set' : 
+    System.DateTime ISystemMonitor_LogViewStop 'get set' : 
+    UInt32 ISystemMonitor_GridColor 'get set' : 
+    UInt32 ISystemMonitor_TimeBarColor 'get set' : 
+    Boolean ISystemMonitor_Highlight 'get set' : 
+    Boolean ISystemMonitor_ShowToolbar 'get set' : 
+    Boolean ISystemMonitor_ReadOnly 'get set' : 
+    SystemMonitor.ReportValueTypeConstants ISystemMonitor_ReportValueType 'get set' : 
+    Boolean ISystemMonitor_MonitorDuplicateInstances 'get set' : 
+    Int32 ISystemMonitor_DisplayFilter 'get set' : 
+    SystemMonitor.LogFiles ISystemMonitor_LogFiles 'get ' : 
+    SystemMonitor.DataSourceTypeConstants ISystemMonitor_DataSourceType 'get set' : 
+    System.String ISystemMonitor_SqlDsnName 'get set' : 
+    System.String ISystemMonitor_SqlLogSetName 'get set' : 
+  Events:
+    SystemMonitor.DISystemMonitorEvents_OnCounterSelectedEventHandler OnCounterSelected: 
+    SystemMonitor.DISystemMonitorEvents_OnCounterAddedEventHandler OnCounterAdded: 
+    SystemMonitor.DISystemMonitorEvents_OnCounterDeletedEventHandler OnCounterDeleted: 
+    SystemMonitor.DISystemMonitorEvents_OnSampleCollectedEventHandler OnSampleCollected: 
+    SystemMonitor.DISystemMonitorEvents_OnDblClickEventHandler OnDblClick: 
+  Methods:
+    ISystemMonitor_get_ShowToolbar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_ShowToolbar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_Paste(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ISystemMonitor_Copy(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ISystemMonitor_Reset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ISystemMonitor_set_ReadOnly(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_ReadOnly(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_ReportValueType(ReportValueTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_ReportValueType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_MonitorDuplicateInstances(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_MonitorDuplicateInstances(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_DisplayFilter(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_DisplayFilter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_LogFiles(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_DataSourceType(DataSourceTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_DataSourceType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_SqlDsnName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_SqlDsnName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_SqlLogSetName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_SqlLogSetName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    add_OnCounterSelected(DISystemMonitorEvents_OnCounterSelectedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_OnCounterSelected(DISystemMonitorEvents_OnCounterSelectedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_OnCounterAdded(DISystemMonitorEvents_OnCounterAddedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_OnCounterAdded(DISystemMonitorEvents_OnCounterAddedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_OnCounterDeleted(DISystemMonitorEvents_OnCounterDeletedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_OnCounterDeleted(DISystemMonitorEvents_OnCounterDeletedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_OnSampleCollected(DISystemMonitorEvents_OnSampleCollectedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_OnSampleCollected(DISystemMonitorEvents_OnSampleCollectedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    add_OnDblClick(DISystemMonitorEvents_OnDblClickEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    remove_OnDblClick(DISystemMonitorEvents_OnDblClickEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ISystemMonitor_set_BorderStyle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_ForeColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_ForeColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_Font(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_Font(IFontDisp(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_Counters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_ShowVerticalGrid(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_ShowVerticalGrid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_ShowHorizontalGrid(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_ShowHorizontalGrid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_ShowLegend(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_ShowLegend(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_ShowScaleLabels(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_ShowScaleLabels(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_ShowValueBar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_ShowValueBar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_MaximumScale(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_MaximumScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_MinimumScale(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_MinimumScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_UpdateInterval(Single(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_UpdateInterval(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_DisplayType(DisplayTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_DisplayType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_ManualUpdate(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_ManualUpdate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_GraphTitle(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_GraphTitle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_YAxisLabel(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_YAxisLabel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_CollectSample(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ISystemMonitor_UpdateGraph(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ISystemMonitor_BrowseCounters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ISystemMonitor_DisplayProperties(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ISystemMonitor_Counter(Int32(In), ICounterItem&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ISystemMonitor_AddCounter(String(In, HasFieldMarshal), ICounterItem&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ISystemMonitor_DeleteCounter(ICounterItem(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ISystemMonitor_get_BackColorCtl(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_BackColorCtl(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_LogFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_LogFileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_LogViewStart(DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_LogViewStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_LogViewStop(DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_LogViewStop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_GridColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_GridColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_TimeBarColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_TimeBarColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_Highlight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_Highlight(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_GridColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_GridColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_TimeBarColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_TimeBarColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Highlight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Highlight(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowToolbar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowToolbar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Paste(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Copy(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Reset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    set_ReadOnly(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ReadOnly(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ReportValueType(ReportValueTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ReportValueType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_MonitorDuplicateInstances(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_MonitorDuplicateInstances(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_DisplayFilter(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_DisplayFilter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_LogFiles(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_DataSourceType(DataSourceTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_DataSourceType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SqlDsnName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SqlDsnName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SqlLogSetName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SqlLogSetName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_EnableDigitGrouping(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_EnableDigitGrouping(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_EnableToolTips(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_EnableToolTips(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowTimeAxisLabels(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowTimeAxisLabels(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ChartScroll(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ChartScroll(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_DataPointCount(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_DataPointCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ScaleToFit(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SaveAs(String(HasFieldMarshal), SysmonFileType): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Relog(String(HasFieldMarshal), SysmonFileType, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ClearData(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    LogSourceStartTime(DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    LogSourceStopTime(DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetLogViewRange(DateTime(In), DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetLogViewRange(DateTime&(Out), DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BatchingLock(Boolean(In), SysmonBatchReason(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    LoadSettings(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ISystemMonitor_get_Appearance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_Appearance(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_BackColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_set_BackColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ISystemMonitor_get_BorderStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Appearance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Appearance(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BackColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BackColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BorderStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BorderStyle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ForeColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ForeColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Font(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Font(IFontDisp(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Counters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowVerticalGrid(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowVerticalGrid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowHorizontalGrid(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowHorizontalGrid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowLegend(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowLegend(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowScaleLabels(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowScaleLabels(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowValueBar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowValueBar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_MaximumScale(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_MaximumScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_MinimumScale(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_MinimumScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_UpdateInterval(Single(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_UpdateInterval(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_DisplayType(DisplayTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_DisplayType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ManualUpdate(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ManualUpdate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_GraphTitle(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_GraphTitle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_YAxisLabel(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_YAxisLabel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    CollectSample(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    UpdateGraph(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BrowseCounters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    DisplayProperties(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Counter(Int32(In), ICounterItem&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddCounter(String(In, HasFieldMarshal), ICounterItem&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    DeleteCounter(ICounterItem(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_BackColorCtl(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BackColorCtl(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_LogFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_LogFileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_LogViewStart(DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_LogViewStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_LogViewStop(DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_LogViewStop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface SystemMonitor.DISystemMonitorEvents_Event: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract
+  Events:
+    SystemMonitor.DISystemMonitorEvents_OnCounterSelectedEventHandler OnCounterSelected: 
+    SystemMonitor.DISystemMonitorEvents_OnCounterAddedEventHandler OnCounterAdded: 
+    SystemMonitor.DISystemMonitorEvents_OnCounterDeletedEventHandler OnCounterDeleted: 
+    SystemMonitor.DISystemMonitorEvents_OnSampleCollectedEventHandler OnSampleCollected: 
+    SystemMonitor.DISystemMonitorEvents_OnDblClickEventHandler OnDblClick: 
+  Methods:
+    add_OnCounterSelected(DISystemMonitorEvents_OnCounterSelectedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_OnCounterSelected(DISystemMonitorEvents_OnCounterSelectedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_OnCounterAdded(DISystemMonitorEvents_OnCounterAddedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_OnCounterAdded(DISystemMonitorEvents_OnCounterAddedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_OnCounterDeleted(DISystemMonitorEvents_OnCounterDeletedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_OnCounterDeleted(DISystemMonitorEvents_OnCounterDeletedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_OnSampleCollected(DISystemMonitorEvents_OnSampleCollectedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_OnSampleCollected(DISystemMonitorEvents_OnSampleCollectedEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    add_OnDblClick(DISystemMonitorEvents_OnDblClickEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    remove_OnDblClick(DISystemMonitorEvents_OnDblClickEventHandler): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class SystemMonitor.DISystemMonitorEvents_OnCounterSelectedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32(In)): PrivateScope, Public, Virtual
+Class SystemMonitor.DISystemMonitorEvents_OnCounterAddedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32(In)): PrivateScope, Public, Virtual
+Class SystemMonitor.DISystemMonitorEvents_OnCounterDeletedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32(In)): PrivateScope, Public, Virtual
+Class SystemMonitor.DISystemMonitorEvents_OnSampleCollectedEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Virtual
+Class SystemMonitor.DISystemMonitorEvents_OnDblClickEventHandler: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, UIntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32(In)): PrivateScope, Public, Virtual
+Interface SystemMonitor.SystemMonitor: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    SystemMonitor.DISystemMonitor
+    SystemMonitor.DISystemMonitorEvents_Event
+Class SystemMonitor.CounterItemClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    SystemMonitor.DICounterItem
+    SystemMonitor.CounterItem
+    SystemMonitor.ICounterItem
+  Properties:
+    Double Value 'get ' : 
+    UInt32 Color 'get set' : 
+    Int32 Width 'get set' : 
+    Int32 LineStyle 'get set' : 
+    Int32 ScaleFactor 'get set' : 
+    System.String Path 'get ' : 
+    Boolean Selected 'get set' : 
+    Boolean Visible 'get set' : 
+    Double ICounterItem_Value 'get ' : 
+    UInt32 ICounterItem_Color 'get set' : 
+    Int32 ICounterItem_Width 'get set' : 
+    Int32 ICounterItem_LineStyle 'get set' : 
+    Int32 ICounterItem_ScaleFactor 'get set' : 
+    System.String ICounterItem_Path 'get ' : 
+  Methods:
+    get_Value(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Color(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Color(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Width(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Width(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_LineStyle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_LineStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ScaleFactor(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ScaleFactor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Path(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetValue(Double&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetStatistics(Double&(Out), Double&(Out), Double&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    set_Selected(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Selected(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Visible(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Visible(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetDataAt(Int32(In), SysmonDataType(In), Object&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ICounterItem_get_Value(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ICounterItem_set_Color(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ICounterItem_get_Color(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ICounterItem_set_Width(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ICounterItem_get_Width(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ICounterItem_set_LineStyle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ICounterItem_get_LineStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ICounterItem_set_ScaleFactor(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ICounterItem_get_ScaleFactor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ICounterItem_get_Path(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ICounterItem_GetValue(Double&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ICounterItem_GetStatistics(Double&(Out), Double&(Out), Double&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface SystemMonitor.CounterItem: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    SystemMonitor.DICounterItem
+Class SystemMonitor.CountersClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    SystemMonitor.ICounters
+    System.Collections.IEnumerable
+    SystemMonitor.Counters
+  Properties:
+    Int32 Count 'get ' : 
+    SystemMonitor.CounterItem Item [System.Object] 'get ' : 
+  Methods:
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Add(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Remove(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface SystemMonitor.Counters: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    SystemMonitor.ICounters
+    System.Collections.IEnumerable
+Class SystemMonitor.LogFileItemClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    SystemMonitor.DILogFileItem
+    SystemMonitor.LogFileItem
+    SystemMonitor.ILogFileItem
+  Properties:
+    System.String Path 'get ' : 
+    System.String ILogFileItem_Path 'get ' : 
+  Methods:
+    get_Path(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ILogFileItem_get_Path(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface SystemMonitor.LogFileItem: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    SystemMonitor.DILogFileItem
+Class SystemMonitor.LogFilesClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    SystemMonitor.ILogFiles
+    System.Collections.IEnumerable
+    SystemMonitor.LogFiles
+  Properties:
+    Int32 Count 'get ' : 
+    SystemMonitor.LogFileItem Item [System.Object] 'get ' : 
+  Methods:
+    get_Count(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetEnumerator(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Item(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Add(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Remove(Object(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface SystemMonitor.LogFiles: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    SystemMonitor.ILogFiles
+    System.Collections.IEnumerable
+Class SystemMonitor.CounterItem2Class: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    SystemMonitor.ICounterItem2
+    SystemMonitor.ICounterItem
+    SystemMonitor.CounterItem2
+  Properties:
+    Double Value 'get ' : 
+    UInt32 Color 'get set' : 
+    Int32 Width 'get set' : 
+    Int32 LineStyle 'get set' : 
+    Int32 ScaleFactor 'get set' : 
+    System.String Path 'get ' : 
+    Boolean Selected 'get set' : 
+    Boolean Visible 'get set' : 
+  Methods:
+    get_Value(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Color(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Color(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Width(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Width(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_LineStyle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_LineStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ScaleFactor(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ScaleFactor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Path(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetValue(Double&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetStatistics(Double&(Out), Double&(Out), Double&(Out), Int32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    set_Selected(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Selected(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Visible(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Visible(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    GetDataAt(Int32(In), SysmonDataType(In), Object&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface SystemMonitor.CounterItem2: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    SystemMonitor.ICounterItem2
+    SystemMonitor.ICounterItem
+Class SystemMonitor.SystemMonitor2Class: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    SystemMonitor.ISystemMonitor2
+    SystemMonitor.ISystemMonitor
+    SystemMonitor.SystemMonitor2
+  Properties:
+    Int32 Appearance 'get set' : 
+    UInt32 BackColor 'get set' : 
+    Int32 BorderStyle 'get set' : 
+    UInt32 ForeColor 'get set' : 
+    stdole.IFontDisp Font 'get set' : 
+    SystemMonitor.Counters Counters 'get ' : 
+    Boolean ShowVerticalGrid 'get set' : 
+    Boolean ShowHorizontalGrid 'get set' : 
+    Boolean ShowLegend 'get set' : 
+    Boolean ShowScaleLabels 'get set' : 
+    Boolean ShowValueBar 'get set' : 
+    Int32 MaximumScale 'get set' : 
+    Int32 MinimumScale 'get set' : 
+    Single UpdateInterval 'get set' : 
+    SystemMonitor.DisplayTypeConstants DisplayType 'get set' : 
+    Boolean ManualUpdate 'get set' : 
+    System.String GraphTitle 'get set' : 
+    System.String YAxisLabel 'get set' : 
+    UInt32 BackColorCtl 'get set' : 
+    System.String LogFileName 'get set' : 
+    System.DateTime LogViewStart 'get set' : 
+    System.DateTime LogViewStop 'get set' : 
+    UInt32 GridColor 'get set' : 
+    UInt32 TimeBarColor 'get set' : 
+    Boolean Highlight 'get set' : 
+    Boolean ShowToolbar 'get set' : 
+    Boolean ReadOnly 'get set' : 
+    SystemMonitor.ReportValueTypeConstants ReportValueType 'get set' : 
+    Boolean MonitorDuplicateInstances 'get set' : 
+    Int32 DisplayFilter 'get set' : 
+    SystemMonitor.LogFiles LogFiles 'get ' : 
+    SystemMonitor.DataSourceTypeConstants DataSourceType 'get set' : 
+    System.String SqlDsnName 'get set' : 
+    System.String SqlLogSetName 'get set' : 
+    Boolean EnableDigitGrouping 'get set' : 
+    Boolean EnableToolTips 'get set' : 
+    Boolean ShowTimeAxisLabels 'get set' : 
+    Boolean ChartScroll 'get set' : 
+    Int32 DataPointCount 'get set' : 
+  Methods:
+    get_GridColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_GridColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_TimeBarColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_TimeBarColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Highlight(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Highlight(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowToolbar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowToolbar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Paste(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Copy(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Reset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    set_ReadOnly(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ReadOnly(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ReportValueType(ReportValueTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ReportValueType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_MonitorDuplicateInstances(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_MonitorDuplicateInstances(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_DisplayFilter(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_DisplayFilter(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_LogFiles(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_DataSourceType(DataSourceTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_DataSourceType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SqlDsnName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SqlDsnName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_SqlLogSetName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_SqlLogSetName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_EnableDigitGrouping(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_EnableDigitGrouping(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_EnableToolTips(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_EnableToolTips(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowTimeAxisLabels(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowTimeAxisLabels(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ChartScroll(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ChartScroll(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_DataPointCount(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_DataPointCount(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    ScaleToFit(Boolean): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SaveAs(String(HasFieldMarshal), SysmonFileType): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Relog(String(HasFieldMarshal), SysmonFileType, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ClearData(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    LogSourceStartTime(DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    LogSourceStopTime(DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetLogViewRange(DateTime(In), DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetLogViewRange(DateTime&(Out), DateTime&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BatchingLock(Boolean(In), SysmonBatchReason(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    LoadSettings(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_Appearance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Appearance(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BackColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BackColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BorderStyle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BorderStyle(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ForeColor(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ForeColor(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Font(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_Font(IFontDisp(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Counters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowVerticalGrid(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowVerticalGrid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowHorizontalGrid(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowHorizontalGrid(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowLegend(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowLegend(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowScaleLabels(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowScaleLabels(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ShowValueBar(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ShowValueBar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_MaximumScale(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_MaximumScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_MinimumScale(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_MinimumScale(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_UpdateInterval(Single(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_UpdateInterval(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_DisplayType(DisplayTypeConstants(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_DisplayType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_ManualUpdate(Boolean(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_ManualUpdate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_GraphTitle(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_GraphTitle(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_YAxisLabel(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_YAxisLabel(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    CollectSample(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    UpdateGraph(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BrowseCounters(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    DisplayProperties(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Counter(Int32(In), ICounterItem&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddCounter(String(In, HasFieldMarshal), ICounterItem&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    DeleteCounter(ICounterItem(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_BackColorCtl(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_BackColorCtl(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_LogFileName(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_LogFileName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_LogViewStart(DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_LogViewStart(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set_LogViewStop(DateTime(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_LogViewStop(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+Interface SystemMonitor.SystemMonitor2: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    SystemMonitor.ISystemMonitor2
+    SystemMonitor.ISystemMonitor
+Class SystemMonitor.AppearPropPageClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    SystemMonitor.IPropertyPage2
+    SystemMonitor.IPropertyPage
+    SystemMonitor.AppearPropPage
+  Methods:
+    SetPageSite(IPropertyPageSite(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Activate(RemotableHandle&(In), RECT&(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Deactivate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetPageInfo(PROPPAGEINFO&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetObjects(UInt32(In), Object&(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Show(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Move(RECT&(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsPageDirty(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Apply(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Help(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    TranslateAccelerator(MSG&(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EditProperty(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface SystemMonitor.AppearPropPage: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    SystemMonitor.IPropertyPage2
+    SystemMonitor.IPropertyPage
+Interface SystemMonitor.IPropertyPage2: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    SystemMonitor.IPropertyPage
+  Methods:
+    SetPageSite(IPropertyPageSite(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Activate(RemotableHandle&(In), RECT&(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Deactivate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetPageInfo(PROPPAGEINFO&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetObjects(UInt32(In), Object&(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Show(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Move(RECT&(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsPageDirty(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Apply(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Help(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    TranslateAccelerator(MSG&(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    EditProperty(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface SystemMonitor.IPropertyPage: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    SetPageSite(IPropertyPageSite(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Activate(RemotableHandle&(In), RECT&(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Deactivate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetPageInfo(PROPPAGEINFO&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    SetObjects(UInt32(In), Object&(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Show(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Move(RECT&(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsPageDirty(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Apply(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Help(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    TranslateAccelerator(MSG&(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Interface SystemMonitor.IPropertyPageSite: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Methods:
+    OnStatusChange(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetLocaleID(UInt32&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    GetPageContainer(Object&(Out, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    TranslateAccelerator(MSG&(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Struct SystemMonitor.MSG: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    IntPtr hwnd : Public
+    UInt32 message : Public
+    UInt32 wParam : Public
+    Int32 lParam : Public
+    UInt32 time : Public
+    SystemMonitor.POINT pt : Public
+Struct SystemMonitor.RemotableHandle: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 fContext : Public
+    SystemMonitor.__MIDL_IWinTypes_0009 u : Public
+Struct SystemMonitor.__MIDL_IWinTypes_0009: AutoLayout, AnsiClass, Class, Public, ExplicitLayout, Sealed
+  :System.ValueType
+  Fields:
+    Int32 hInproc : Public
+    Int32 hRemote : Public
+Struct SystemMonitor.POINT: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 x : Public
+    Int32 y : Public
+Struct SystemMonitor.RECT: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 left : Public
+    Int32 top : Public
+    Int32 right : Public
+    Int32 bottom : Public
+Struct SystemMonitor.PROPPAGEINFO: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    UInt32 cb : Public
+    System.String pszTitle : Public, HasFieldMarshal
+    SystemMonitor.SIZE SIZE : Public
+    System.String pszDocString : Public, HasFieldMarshal
+    System.String pszHelpFile : Public, HasFieldMarshal
+    UInt32 dwHelpContext : Public
+Struct SystemMonitor.SIZE: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Int32 cx : Public
+    Int32 cy : Public
+Class SystemMonitor.GeneralPropPageClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    SystemMonitor.IPropertyPage2
+    SystemMonitor.IPropertyPage
+    SystemMonitor.GeneralPropPage
+  Methods:
+    SetPageSite(IPropertyPageSite(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Activate(RemotableHandle&(In), RECT&(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Deactivate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetPageInfo(PROPPAGEINFO&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetObjects(UInt32(In), Object&(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Show(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Move(RECT&(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsPageDirty(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Apply(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Help(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    TranslateAccelerator(MSG&(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EditProperty(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface SystemMonitor.GeneralPropPage: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    SystemMonitor.IPropertyPage2
+    SystemMonitor.IPropertyPage
+Class SystemMonitor.GraphPropPageClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    SystemMonitor.IPropertyPage2
+    SystemMonitor.IPropertyPage
+    SystemMonitor.GraphPropPage
+  Methods:
+    SetPageSite(IPropertyPageSite(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Activate(RemotableHandle&(In), RECT&(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Deactivate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetPageInfo(PROPPAGEINFO&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetObjects(UInt32(In), Object&(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Show(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Move(RECT&(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsPageDirty(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Apply(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Help(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    TranslateAccelerator(MSG&(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EditProperty(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface SystemMonitor.GraphPropPage: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    SystemMonitor.IPropertyPage2
+    SystemMonitor.IPropertyPage
+Class SystemMonitor.SourcePropPageClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    SystemMonitor.IPropertyPage2
+    SystemMonitor.IPropertyPage
+    SystemMonitor.SourcePropPage
+  Methods:
+    SetPageSite(IPropertyPageSite(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Activate(RemotableHandle&(In), RECT&(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Deactivate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetPageInfo(PROPPAGEINFO&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetObjects(UInt32(In), Object&(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Show(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Move(RECT&(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsPageDirty(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Apply(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Help(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    TranslateAccelerator(MSG&(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EditProperty(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface SystemMonitor.SourcePropPage: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    SystemMonitor.IPropertyPage2
+    SystemMonitor.IPropertyPage
+Class SystemMonitor.CounterPropPageClass: AutoLayout, AnsiClass, Class, Public, Import
+  :System.__ComObject
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+  Interfaces:
+    SystemMonitor.IPropertyPage2
+    SystemMonitor.IPropertyPage
+    SystemMonitor.CounterPropPage
+  Methods:
+    SetPageSite(IPropertyPageSite(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Activate(RemotableHandle&(In), RECT&(In), Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Deactivate(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetPageInfo(PROPPAGEINFO&(Out)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetObjects(UInt32(In), Object&(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Show(UInt32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Move(RECT&(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    IsPageDirty(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Apply(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Help(String(In, HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    TranslateAccelerator(MSG&(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EditProperty(Int32(In)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface SystemMonitor.CounterPropPage: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, Import
+  Interfaces:
+    SystemMonitor.IPropertyPage2
+    SystemMonitor.IPropertyPage
+Class SystemMonitor.DISystemMonitorEvents_SinkHelper: AutoLayout, AnsiClass, Class, Public, Sealed
+  Interfaces:
+    SystemMonitor.DISystemMonitorEvents
+  Fields:
+    SystemMonitor.DISystemMonitorEvents_OnCounterSelectedEventHandler m_OnCounterSelectedDelegate : Public
+    SystemMonitor.DISystemMonitorEvents_OnCounterAddedEventHandler m_OnCounterAddedDelegate : Public
+    SystemMonitor.DISystemMonitorEvents_OnCounterDeletedEventHandler m_OnCounterDeletedDelegate : Public
+    SystemMonitor.DISystemMonitorEvents_OnSampleCollectedEventHandler m_OnSampleCollectedDelegate : Public
+    SystemMonitor.DISystemMonitorEvents_OnDblClickEventHandler m_OnDblClickDelegate : Public
+    Int32 m_dwCookie : Public
+  Methods:
+    OnCounterSelected(Int32): PrivateScope, Public, Virtual
+    OnCounterAdded(Int32): PrivateScope, Public, Virtual
+    OnCounterDeleted(Int32): PrivateScope, Public, Virtual
+    OnSampleCollected(): PrivateScope, Public, Virtual
+    OnDblClick(Int32): PrivateScope, Public, Virtual
